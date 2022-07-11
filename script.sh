@@ -7,7 +7,7 @@ NC='\033[0m'
 GREEN='\033[0;32m'
 CYAN='\033[0;36m'
 
-echo -e "${CYAN}NextDns${NC} ${GREEN}::${NC} Update linked IP..."
+echo -e "${CYAN}NextDns${NC} ${GREEN}::${NC} ${CYAN}Update linked IP...${NC}"
 while read line; do
     echo -n -e "${NEXTDNS_HOST}/${GREEN}${line}${NC}/${NEXTDNS_USER}\t"
     curl --silent --request GET --url "${NEXTDNS_HOST}/${line}/${NEXTDNS_USER}" | grep -E "[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}"
