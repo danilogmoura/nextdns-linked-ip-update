@@ -9,4 +9,4 @@ services:
     environment:
       - NEXTDNS_HOST=https://link-ip.nextdns.io
       - NEXTDNS_USER=user_ids
-    
+    restart: always
