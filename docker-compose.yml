@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  nextdns-linked-ip-update:
+    build: .
+    image: nextdns-linked-ip-update:1.0
+    volumes:
+      - ./dns-profiles:/usr/local/bin/dns-profiles
+    environment:
+      - NEXTDNS_HOST=https://link-ip.nextdns.io
+      - NEXTDNS_USER=user_ids
+    

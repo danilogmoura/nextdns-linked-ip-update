@@ -8,6 +8,6 @@ COPY ./script.sh ${SCRIPT_DIR}/script.sh
 
 RUN apk update 
 RUN apk --no-cache add curl
-RUN echo "*/1 * * * *    ${SCRIPT_DIR}/script.sh ${SCRIPT_DIR}/dns-profiles" > /etc/crontabs/root
+RUN echo "0 */1 * * *    ${SCRIPT_DIR}/script.sh ${SCRIPT_DIR}/dns-profiles" > /etc/crontabs/root
 
 CMD ["crond", "-f"]
